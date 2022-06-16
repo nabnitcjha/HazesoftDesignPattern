@@ -17,15 +17,15 @@ use Illuminate\Support\Facades\Route;
 /**
  * Company
  */
-Route::resource('company', 'App\Http\Controllers\Api\CompanyController', ['only' => ['index', 'show']]);
+Route::resource('company', 'App\Http\Controllers\Api\CompanyController', ['only' => ['index', 'store']]);
 
 /**
  * Department
  */
-Route::resource('department', 'App\Http\Controllers\Api\DepartmentController', ['only' => ['index', 'show']]);
+Route::resource('department', 'App\Http\Controllers\Api\DepartmentController', ['only' => ['index', 'store']]);
 
 /**
  * Employee
  */
-Route::resource('employee', 'App\Http\Controllers\Api\EmployeeController', ['only' => ['index', 'show']]);
+Route::resource('employee', 'App\Http\Controllers\Api\EmployeeController', ['only' => ['index', 'store']]);
 

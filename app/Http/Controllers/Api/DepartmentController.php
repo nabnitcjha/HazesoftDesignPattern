@@ -15,7 +15,8 @@ class DepartmentController extends BaseController
      */
     public function index()
     {
-        //
+        //Structural Design Patterns / Inheritance
+        return parent::index();
     }
 
     /**
@@ -26,7 +27,8 @@ class DepartmentController extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        //Structural Design Patterns / Inheritance
+        return parent::store($request);
     }
 
 }

@@ -32,5 +32,21 @@ class CompanyController  extends BaseController
         return parent::store($request);
     }
 
+    public function getCompanyDepartment($company_id)
+    {  
+        //Structural Design Patterns / Inheritance
+        $this->Query->where('id', $company_id)->with(array('department' ));
+
+        return parent::index();
+    }
+
+    public function getCompanyEmployee($company_id)
+    {
+        //Structural Design Patterns / Inheritance
+        $this->Query->where('id', $company_id)->with(array('employee' ));
+
+        return parent::index();
+    }
+
 
 }

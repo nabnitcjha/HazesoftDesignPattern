@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class DepartmentController extends BaseController
 {
-    public $model_name = "App\Department";
+    public $model_name = "App\Models\Department";
     /**
      * Display a listing of the resource.
      *

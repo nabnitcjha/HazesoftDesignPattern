@@ -10,6 +10,9 @@ class BaseController extends Controller
 
     use ApiResponser;
 
+    public $model_name;
+    public $Model;
+
     public function __construct() {
         if (!class_exists($this->model_name)) {
             return $this->errorResponse('Modal not found', 409);
@@ -20,6 +23,11 @@ class BaseController extends Controller
         //Structural Design Patterns
         $this->Query = $this->Model::select("*");
     }
+
+    public function getModel() {
+        return $this->Model;
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -40,7 +48,7 @@ class BaseController extends Controller
     public function store(Request $request)
     {
         //
-        $params = $request->input("params"); 
+        $params = $request->all(); 
 
         $Model = $this->getModel();
         foreach ($params as $key => $value) {

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class CompanyController  extends BaseController
 {
-    public $model_name = "App\Company";
+    public $model_name = "App\Models\Company";
     /**
      * Display a listing of the resource.
      *
@@ -15,7 +15,7 @@ class CompanyController  extends BaseController
      */
     public function index()
     {
-        //Structural Design Patterns
+        //Structural Design Patterns / Inheritance
         return parent::index();
     }
 
@@ -28,7 +28,8 @@ class CompanyController  extends BaseController
      */
     public function store(Request $request)
     {
-        //
+        //Structural Design Patterns / Inheritance
+        return parent::store($request);
     }
 
 

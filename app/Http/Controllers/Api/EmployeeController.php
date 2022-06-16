@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class EmployeeController extends BaseController
 {
-    public $model_name = "App\Employee";
+    public $model_name = "App\Models\Employee";
     /**
      * Display a listing of the resource.
      *

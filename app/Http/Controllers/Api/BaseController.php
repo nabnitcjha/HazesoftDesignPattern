@@ -62,24 +62,5 @@ class BaseController extends Controller
 
         return $this->successResponse($Model, 200);
     }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-        $Model = $this->getModel();
-        $Obj = $Model::find($id);
-        if (!$Obj) { 
-            return $this->errorResponse("Can not find {$id}", 404);
-        }
-        
-        return $this->showOne($Obj, 200);
-    }
-
     
 }

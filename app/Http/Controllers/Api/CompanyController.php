@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
 
-class CompanyController extends Controller
+class CompanyController  extends BaseController
 {
+    public $model_name = "App\Company";
     /**
      * Display a listing of the resource.
      *
@@ -14,18 +15,10 @@ class CompanyController extends Controller
      */
     public function index()
     {
-        //
+        //Structural Design Patterns
+        return parent::index();
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.

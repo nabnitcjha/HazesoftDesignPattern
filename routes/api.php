@@ -14,6 +14,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+/**
+ * Company
+ */
+Route::resource('company', 'App\Http\Controllers\Api\CompanyController', ['only' => ['index', 'show']]);
+
+/**
+ * Department
+ */
+Route::resource('department', 'App\Http\Controllers\Api\DepartmentController', ['only' => ['index', 'show']]);
+
+/**
+ * Employee
+ */
+Route::resource('employee', 'App\Http\Controllers\Api\EmployeeController', ['only' => ['index', 'show']]);
+

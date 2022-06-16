@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Api;
 
-use App\Http\Controllers\Controller;
+use App\Http\Controllers\Api\BaseController;
 use Illuminate\Http\Request;
 
-class EmployeeController extends Controller
+class EmployeeController extends BaseController
 {
+    public $model_name = "App\Employee";
     /**
      * Display a listing of the resource.
      *

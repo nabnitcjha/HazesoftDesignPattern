@@ -14,16 +14,16 @@ class CreateEmployeeDetailsTable extends Migration
     public function up()
     {
         Schema::create('employee_details', function (Blueprint $table) {
-            $table->id();
-            $table->integer('company_id')->unsigned();
-            $table->integer('department_id')->unsigned();
-            $table->integer('employee_id')->unsigned();
+            $table->increments('id');
+            $table->integer('company_id')->unsigned()->index();
+            $table->integer('department_id')->unsigned()->index();
+            $table->integer('employee_id')->unsigned()->index();
             $table->timestamps();
 
             
-            $table->foreign('company_id')->references('id')->on('companies');
-            $table->foreign('department_id')->references('id')->on('departments');
-            $table->foreign('employee_id')->references('id')->on('employees');
+            $table->foreign('company_id')->references('id')->on('companies')->onDelete('cascade');
+            $table->foreign('department_id')->references('id')->on('departments')->onDelete('cascade');
+            $table->foreign('employee_id')->references('id')->on('employees')->onDelete('cascade');
         });
     }
 
